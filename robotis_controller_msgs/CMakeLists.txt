@@ -21,6 +21,7 @@ add_message_files(
   SyncWriteItem.msg
   JointCtrlModule.msg
   StatusMsg.msg
+  WriteControlTable.msg
 )
 
 add_service_files(
