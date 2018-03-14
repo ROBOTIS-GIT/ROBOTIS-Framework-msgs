@@ -8,8 +8,8 @@ project(robotis_controller_msgs)
 # Packages
 ################################################################################
 find_package(catkin REQUIRED COMPONENTS
-  sensor_msgs
   std_msgs
+  sensor_msgs
   message_generation
 )
 
@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
 # Declare ROS messages, services and actions
 ################################################################################
 add_message_files(
+  DIRECTORY msg
   FILES
   SyncWriteItem.msg
   JointCtrlModule.msg
@@ -25,6 +26,7 @@ add_message_files(
 )
 
 add_service_files(
+  DIRECTORY srv
   FILES
   GetJointModule.srv
 )
@@ -39,7 +41,7 @@ generate_messages(
 # Catkin specific configuration
 ################################################################################
 catkin_package(
-  CATKIN_DEPENDS std_msgs sensor_msgs
+  CATKIN_DEPENDS std_msgs sensor_msgs message_runtime
 )
 
 ################################################################################

@@ -5,7 +5,7 @@ Changelog for package robotis_controller_msgs
 0.1.1 (2016-11-23)
 -----------
 * added WriteControlTable.msg
-* Contributors: Changhyun Sung, Jay Song, Zerom
+* Contributors: SCH, Jay Song, Zerom
 
 0.1.0 (2016-08-12)
 -----------
