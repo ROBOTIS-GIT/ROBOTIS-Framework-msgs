@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>robotis_controller_msgs</name>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <description>
     Message and service types: custom messages and services for robotis_framework packages
   </description>
