@@ -2,6 +2,11 @@
 Changelog for package robotis_controller_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.3 (2018-03-20)
+------------------
+* refactoring to release
+* Contributors: Pyo
+
 0.1.2 (2018-03-15)
 ------------------
 * changed LICENSE
