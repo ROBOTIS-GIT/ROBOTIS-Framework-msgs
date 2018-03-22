@@ -31,6 +31,8 @@ add_message_files(
 add_service_files(
   FILES
   GetJointModule.srv
+  SetJointModule.srv
+  SetModule.srv
 )
 
 generate_messages(
