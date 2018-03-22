@@ -2,6 +2,12 @@
 Changelog for package robotis_controller_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.4 (2018-03-22)
+------------------
+* added service to set module
+* modified documents
+* Contributors: Kayman, Pyo
+
 0.1.3 (2018-03-20)
 ------------------
 * refactoring to release
