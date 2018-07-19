@@ -33,6 +33,7 @@ add_service_files(
   GetJointModule.srv
   SetJointModule.srv
   SetModule.srv
+  LoadOffset.srv
 )
 
 generate_messages(
