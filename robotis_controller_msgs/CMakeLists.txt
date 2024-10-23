@@ -1,66 +1,30 @@
-################################################################################
-# Set minimum required version of cmake, project name and compile options
-################################################################################
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(robotis_controller_msgs)
 
-################################################################################
-# Find catkin packages and libraries for catkin and system dependencies
-################################################################################
-find_package(catkin REQUIRED COMPONENTS
-  std_msgs
-  sensor_msgs
-  message_generation
+find_package(ament_cmake REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+set(msg_files
+  "msg/SyncWriteItem.msg"
+  "msg/JointCtrlModule.msg"
+  "msg/StatusMsg.msg"
+  "msg/WriteControlTable.msg"
 )
 
-################################################################################
-# Setup for python modules and scripts
-################################################################################
-
-################################################################################
-# Declare ROS messages, services and actions
-################################################################################
-add_message_files(
-  FILES
-  SyncWriteItem.msg
-  JointCtrlModule.msg
-  StatusMsg.msg
-  WriteControlTable.msg
+set(srv_files
+  "srv/GetJointModule.srv"
+  "srv/SetJointModule.srv"
+  "srv/SetModule.srv"
+  "srv/LoadOffset.srv"
 )
 
-add_service_files(
-  FILES
-  GetJointModule.srv
-  SetJointModule.srv
-  SetModule.srv
-  LoadOffset.srv
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+  ${srv_files}
+  DEPENDENCIES std_msgs sensor_msgs
 )
 
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  sensor_msgs
-)
-
-################################################################################
-# Declare ROS dynamic reconfigure parameters
-################################################################################
-
-################################################################################
-# Declare catkin specific configuration to be passed to dependent projects
-################################################################################
-catkin_package(
-  CATKIN_DEPENDS std_msgs sensor_msgs message_runtime
-)
-
-################################################################################
-# Build
-################################################################################
-
-################################################################################
-# Install
-################################################################################
-
-################################################################################
-# Test
-################################################################################
+ament_export_dependencies(rosidl_default_runtime)
+ament_package()
